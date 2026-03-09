@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Master Tags -->
+    <title>Smart GPA & CGPA Calculator | Hammad Developer</title>
+    <meta name="description" content="Calculate your GPA and CGPA with dynamic scales (80, 85, 90). The most accurate, responsive academic tool for students worldwide. Optimized by Hammad Developer.">
+    <meta name="keywords" content="GPA Calculator, CGPA Calculator, 80 marks 4.0 gpa, 85 marks 4.0 gpa, 90 marks 4.0 gpa, Hammad Developer, Academic Tool">
+    <meta name="author" content="Hammad Developer">
+    <meta name="robots" content="index, follow">
+
+    <!-- JSON-LD for Google Search Ranking -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Smart GPA Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "EducationApplication",
+      "author": { "@type": "Person", "name": "Hammad Developer" }
+    }
+    </script>
+
+    <!-- Free Tab Icon (Emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-wrapper">
+        <!-- Logo & Title -->
+        <header class="header">
+            <div class="logo-wrapper">
+                <svg class="main-svg-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org">
+                    <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z""")/>>
+                </svg>
+            </div>
+            <h1>Academic <span class="accent-text">Pro</span></h1>
+            <p>Precise GPA & CGPA Analysis</p>
+        </header>
+
+        <!-- Dynamic Scale Selection -->
+        <section class="scale-box">
+            <p><strong>Set 4.0 GPA</strong></p>
+            <div class="scale-options">
+                <input type="radio" name="threshold" id="t80" value="80">
+                <label for="t80">80%</label>
+                
+                <input type="radio" name="threshold" id="t85" value="85" checked>
+                <label for="t85">85%</label>
+                
+                <input type="radio" name="threshold" id="t90" value="90">
+                <label for="t90">90%</label>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button id="gpaTabBtn" class="tab-btn active" onclick="switchTab('gpa')">Semester GPA</button>
+            <button id="cgpaTabBtn" class="tab-btn" onclick="switchTab('cgpa')">Total CGPA</button>
+        </nav>
+
+        <!-- GPA Calculator Section -->
+        <section id="gpa-section" class="calc-area">
+            <div id="gpa-rows-container">
+                <div class="input-group">
+                    <input type="number" placeholder="Marks(0-100)" class="gpa-marks">
+                    <input type="number" placeholder="Credits" class="gpa-credits">
+                </div>
+            </div>
+            <button class="btn-add" onclick="addRow('gpa-rows-container')">+ Add Subject</button>
+            <button class="btn-main" onclick="calculateGPA()">Calculate GPA</button>
+        </section>
+
+        <!-- CGPA Calculator Section -->
+        <section id="cgpa-section" class="calc-area" style="display:none;">
+            <div id="cgpa-rows-container">
+                <div class="input-group">
+                    <input type="number" step="0.01" placeholder="Sem GPA" class="cgpa-val">
+                    <input type="number" placeholder="Sem Credits" class="cgpa-credits">
+                </div>
+            </div>
+            <button class="btn-add" onclick="addRow('cgpa-rows-container')">+ Add Semester</button>
+            <button class="btn-main" onclick="calculateCGPA()">Calculate CGPA</button>
+        </section>
+
+        <!-- Personality Result Card -->
+         
+        <div id="result-card" class="result-card">
+            <h2 id="final-result">0.00</h2>
+            <p id="congrats-msg">Your result will show here!</p>
+        </div>
+
+        <!-- SEO Details Section -->
+        <article class="seo-details">
+            <h3>Why use this GPA Calculator?</h3>
+            <p>Our tool is designed for accuracy. By selecting a dynamic scale (80, 85, or 90), the system automatically adjusts the grade point relative to your city's academic standards. This ensures students get the most realistic representation of their academic standing.</p>
+        </article>
+    </main>
+  
+
+
+    <!-- Stylish Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p>Expertly Developed by</p>
+            <h2 class="dev-name">Hammad Developer</h2>
+            <div class="badges">
+                <span>Fast</span> • <span>SEO Ready</span> • <span>Responsive</span>
+            </div>
+            <p class="copyright">© 2026 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
